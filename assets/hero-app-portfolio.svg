@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 825" role="img" aria-labelledby="title desc">
+  <title id="title">CoreKit Studio app portfolio</title>
+  <desc id="desc">A polished set of app interface previews for a studio portfolio website.</desc>
+  <defs>
+    <linearGradient id="backdrop" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#d9f5ef"/>
+      <stop offset="0.52" stop-color="#eef3f9"/>
+      <stop offset="1" stop-color="#f7e6b9"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#15a8a1"/>
+      <stop offset="1" stop-color="#286c76"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#376bd0"/>
+      <stop offset="1" stop-color="#7eb4e6"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#438753"/>
+      <stop offset="1" stop-color="#d6b35b"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#172026" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="825" rx="34" fill="url(#backdrop)"/>
+  <g filter="url(#shadow)">
+    <rect x="96" y="92" width="1012" height="640" rx="28" fill="#ffffff"/>
+    <rect x="96" y="92" width="1012" height="86" rx="28" fill="#172026"/>
+    <circle cx="146" cy="136" r="12" fill="#f0b44c"/>
+    <circle cx="184" cy="136" r="12" fill="#5fc7a4"/>
+    <circle cx="222" cy="136" r="12" fill="#7aa7e8"/>
+    <rect x="276" y="118" width="274" height="36" rx="18" fill="#26323a"/>
+    <rect x="762" y="118" width="278" height="36" rx="18" fill="#26323a"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="152" y="228" width="300" height="380" rx="28" fill="#f8fbfb"/>
+    <rect x="184" y="260" width="74" height="74" rx="19" fill="url(#teal)"/>
+    <path d="M213 299l16 16 30-38" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="184" y="374" width="190" height="19" rx="9.5" fill="#172026"/>
+    <rect x="184" y="413" width="226" height="15" rx="7.5" fill="#91a0a6"/>
+    <rect x="184" y="452" width="174" height="15" rx="7.5" fill="#91a0a6"/>
+    <rect x="184" y="518" width="98" height="54" rx="12" fill="#d9f5ef"/>
+    <rect x="302" y="518" width="104" height="54" rx="12" fill="#edf2f4"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="498" y="192" width="300" height="430" rx="32" fill="#ffffff"/>
+    <rect x="534" y="236" width="74" height="74" rx="19" fill="url(#blue)"/>
+    <path d="M558 276h46M581 253v46" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+    <rect x="534" y="348" width="180" height="20" rx="10" fill="#172026"/>
+    <rect x="534" y="390" width="226" height="15" rx="7.5" fill="#91a0a6"/>
+    <rect x="534" y="428" width="198" height="15" rx="7.5" fill="#91a0a6"/>
+    <rect x="534" y="500" width="228" height="70" rx="16" fill="#eef3f9"/>
+    <rect x="554" y="522" width="88" height="12" rx="6" fill="#376bd0"/>
+    <rect x="554" y="548" width="154" height="12" rx="6" fill="#91a0a6"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="844" y="252" width="204" height="328" rx="28" fill="#f8fbfb"/>
+    <rect x="876" y="284" width="74" height="74" rx="19" fill="url(#green)"/>
+    <path d="M903 331c34-45 65-34 64-6 0 28-34 43-64 6z" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="876" y="398" width="126" height="18" rx="9" fill="#172026"/>
+    <rect x="876" y="436" width="138" height="14" rx="7" fill="#91a0a6"/>
+    <rect x="876" y="472" width="94" height="14" rx="7" fill="#91a0a6"/>
+    <rect x="876" y="518" width="88" height="32" rx="16" fill="#f1dfb4"/>
+  </g>
+  <path d="M174 674h854" stroke="#dbe2e6" stroke-width="2"/>
+  <rect x="174" y="696" width="220" height="16" rx="8" fill="#91a0a6"/>
+  <rect x="428" y="696" width="136" height="16" rx="8" fill="#15a8a1"/>
+  <rect x="596" y="696" width="172" height="16" rx="8" fill="#376bd0"/>
+</svg>
