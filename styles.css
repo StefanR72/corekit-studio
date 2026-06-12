@@ -95,13 +95,13 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(300px, 0.82fr) minmax(500px, 1fr);
+  grid-template-columns: minmax(300px, 0.9fr) minmax(420px, 0.86fr);
   align-items: center;
   gap: clamp(30px, 5vw, 78px);
-  width: min(100%, 1460px);
+  width: min(100%, 1400px);
   margin: 0 auto;
   min-height: auto;
-  padding: clamp(68px, 8vw, 118px) clamp(20px, 4vw, 56px) clamp(58px, 7vw, 92px);
+  padding: clamp(62px, 7vw, 104px) clamp(20px, 4vw, 56px) clamp(48px, 6vw, 78px);
 }
 
 .hero-copy {
@@ -210,9 +210,11 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(10px, 1.4vw, 20px);
-  min-height: clamp(440px, 46vw, 640px);
-  padding: 0 8px;
+  gap: clamp(8px, 1.2vw, 16px);
+  max-width: 620px;
+  min-height: clamp(350px, 36vw, 500px);
+  margin-left: auto;
+  padding: 0 6px;
 }
 
 .app-showcase .phone-shot,
@@ -224,32 +226,32 @@ h3 {
   object-position: top center;
   background: #101116;
   border: 1px solid rgba(23, 32, 38, 0.18);
-  border-radius: 30px;
-  box-shadow: 0 24px 60px rgba(23, 32, 38, 0.16);
+  border-radius: 26px;
+  box-shadow: 0 20px 48px rgba(23, 32, 38, 0.15);
 }
 
 .app-showcase .phone-shot {
-  flex: 0 1 clamp(160px, 29%, 250px);
+  flex: 0 1 clamp(128px, 26%, 188px);
   aspect-ratio: 1320 / 2868;
 }
 
 .app-showcase .primary-shot {
   order: 2;
-  flex-basis: clamp(184px, 34%, 292px);
+  flex-basis: clamp(148px, 31%, 226px);
   z-index: 3;
-  transform: translateY(-12px);
+  transform: translateY(-8px);
 }
 
 .app-showcase img:nth-child(2) {
   order: 1;
   z-index: 2;
-  transform: translateY(34px);
+  transform: translateY(24px);
 }
 
 .app-showcase img:nth-child(3) {
   order: 3;
   z-index: 1;
-  transform: translateY(18px);
+  transform: translateY(12px);
 }
 
 .section {
@@ -543,7 +545,8 @@ h3 {
 
   .app-showcase {
     min-height: auto;
-    padding-block: 18px 34px;
+    margin-inline: auto;
+    padding-block: 16px 30px;
   }
 
   .app-grid,
@@ -586,8 +589,8 @@ h3 {
   }
 
   .app-showcase .phone-shot {
-    flex: 0 0 68%;
-    max-width: 260px;
+    flex: 0 0 62%;
+    max-width: 230px;
     scroll-snap-align: center;
     transform: none;
   }
