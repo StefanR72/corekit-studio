@@ -95,13 +95,13 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(300px, 0.9fr) minmax(420px, 0.86fr);
+  grid-template-columns: minmax(300px, 0.95fr) minmax(360px, 0.72fr);
   align-items: center;
-  gap: clamp(30px, 5vw, 78px);
-  width: min(100%, 1400px);
+  gap: clamp(28px, 5vw, 70px);
+  width: min(100%, 1320px);
   margin: 0 auto;
   min-height: auto;
-  padding: clamp(62px, 7vw, 104px) clamp(20px, 4vw, 56px) clamp(48px, 6vw, 78px);
+  padding: clamp(58px, 7vw, 96px) clamp(20px, 4vw, 56px) clamp(46px, 6vw, 74px);
 }
 
 .hero-copy {
@@ -196,7 +196,7 @@ h3 {
   min-width: 0;
 }
 
-.hero-visual > img {
+.hero-visual:not(.app-showcase) > img {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 11;
@@ -210,34 +210,38 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(8px, 1.2vw, 16px);
-  max-width: 620px;
-  min-height: clamp(350px, 36vw, 500px);
+  gap: 12px;
+  width: min(100%, 470px);
+  min-height: 360px;
   margin-left: auto;
-  padding: 0 6px;
+  padding: 0;
+  overflow: visible;
 }
 
 .app-showcase .phone-shot,
 .app-showcase .watch-shot,
 .media-strip img {
   display: block;
-  width: 100%;
   object-fit: cover;
   object-position: top center;
   background: #101116;
   border: 1px solid rgba(23, 32, 38, 0.18);
-  border-radius: 26px;
-  box-shadow: 0 20px 48px rgba(23, 32, 38, 0.15);
+  border-radius: 22px;
+  box-shadow: 0 18px 42px rgba(23, 32, 38, 0.14);
 }
 
 .app-showcase .phone-shot {
-  flex: 0 1 clamp(128px, 26%, 188px);
+  width: 132px;
+  max-width: 132px;
+  flex: 0 0 132px;
   aspect-ratio: 1320 / 2868;
 }
 
 .app-showcase .primary-shot {
   order: 2;
-  flex-basis: clamp(148px, 31%, 226px);
+  width: 164px;
+  max-width: 164px;
+  flex-basis: 164px;
   z-index: 3;
   transform: translateY(-8px);
 }
@@ -245,7 +249,7 @@ h3 {
 .app-showcase img:nth-child(2) {
   order: 1;
   z-index: 2;
-  transform: translateY(24px);
+  transform: translateY(22px);
 }
 
 .app-showcase img:nth-child(3) {
@@ -337,7 +341,10 @@ h3 {
 }
 
 .media-strip img {
+  width: 100%;
   aspect-ratio: 1320 / 2868;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
 }
 
 .media-strip img:nth-child(2) {
@@ -589,8 +596,9 @@ h3 {
   }
 
   .app-showcase .phone-shot {
-    flex: 0 0 62%;
-    max-width: 230px;
+    width: 190px;
+    max-width: 190px;
+    flex: 0 0 190px;
     scroll-snap-align: center;
     transform: none;
   }
