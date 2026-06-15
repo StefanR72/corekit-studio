@@ -107,6 +107,15 @@ img {
   font-size: 0.78rem;
 }
 
+.brand-logo {
+  display: block;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(23, 32, 38, 0.14);
+}
+
 .nav {
   display: flex;
   align-items: center;
