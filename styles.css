@@ -805,3 +805,130 @@ h3 {
     flex-direction: column;
   }
 }
+
+/* App focus and screenshot normalization */
+.app-showcase {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: clamp(10px, 1.6vw, 16px);
+  width: min(100%, 620px);
+  min-height: 330px;
+  margin-left: auto;
+  padding: 12px;
+  overflow: visible;
+}
+
+.app-showcase::after {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  aspect-ratio: 1320 / 2868;
+  background: #101116 url("assets/flexrente-dashboard.png?v=20260619-2") top center / cover no-repeat;
+  border: 1px solid rgba(23, 32, 38, 0.18);
+  border-radius: 22px;
+  box-shadow: 0 18px 42px rgba(23, 32, 38, 0.14);
+}
+
+.app-showcase .phone-shot,
+.app-showcase .primary-shot {
+  width: 100%;
+  max-width: 150px;
+  flex: initial;
+  order: initial;
+  z-index: auto;
+  transform: none;
+}
+
+.app-showcase img:nth-child(2),
+.app-showcase img:nth-child(3) {
+  order: initial;
+  z-index: auto;
+  transform: none;
+}
+
+.product-layout .media-strip,
+.product-layout .media-strip.four-up,
+.product-layout .media-strip.mixed-device {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  justify-items: center;
+}
+
+.product-layout .media-strip img,
+.product-layout .media-strip img:nth-child(2),
+.product-layout .media-strip.four-up img:nth-child(2),
+.product-layout .media-strip.four-up img:nth-child(3),
+.product-layout .media-strip.four-up img:nth-child(4) {
+  width: min(100%, 220px);
+  max-width: 220px;
+  aspect-ratio: 1320 / 2868;
+  height: auto;
+  margin-bottom: 0;
+  object-fit: cover;
+  object-position: top center;
+}
+
+#puretank .media-strip img:nth-child(n + 4),
+#korb .media-strip img:nth-child(n + 4),
+#korb .watch-media {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .app-showcase {
+    width: min(100%, 560px);
+    margin-inline: auto;
+    min-height: auto;
+  }
+
+  .product-layout .media-strip,
+  .product-layout .media-strip.four-up,
+  .product-layout .media-strip.mixed-device {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .app-showcase {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+    justify-items: center;
+    gap: 12px;
+    overflow: visible;
+    padding: 8px 2px 28px;
+  }
+
+  .app-showcase .phone-shot,
+  .app-showcase .primary-shot,
+  .app-showcase::after {
+    width: 100%;
+    max-width: 150px;
+    flex: initial;
+    scroll-snap-align: initial;
+    transform: none;
+  }
+
+  .app-showcase img:nth-child(2),
+  .app-showcase img:nth-child(3) {
+    transform: none;
+  }
+
+  .product-layout .media-strip,
+  .product-layout .media-strip.four-up,
+  .product-layout .media-strip.mixed-device {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .product-layout .media-strip img,
+  .product-layout .media-strip img:nth-child(3),
+  .product-layout .media-strip.four-up img:nth-child(3) {
+    grid-column: auto;
+    width: 100%;
+    max-width: 150px;
+  }
+}
