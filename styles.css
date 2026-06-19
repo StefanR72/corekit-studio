@@ -231,6 +231,11 @@ h3 {
   color: var(--ink);
 }
 
+.disabled-button {
+  color: var(--muted);
+  cursor: default;
+}
+
 .button.compact {
   min-height: 42px;
   padding-inline: 16px;
@@ -585,7 +590,7 @@ h3 {
 
 .note-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   margin-top: 22px;
 }
@@ -674,6 +679,12 @@ h3 {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .note-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
