@@ -877,6 +877,20 @@ h3 {
   display: none;
 }
 
+/* FlexRente screenshots already include their own iPhone frame, so avoid clipping the native rounded corners. */
+.app-showcase::after,
+#flexrente .media-strip img {
+  object-fit: contain;
+  object-position: center;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 18px 42px rgba(23, 32, 38, 0.14));
+}
+
 @media (max-width: 900px) {
   .app-showcase {
     width: min(100%, 560px);
