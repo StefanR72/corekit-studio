@@ -827,8 +827,8 @@ h3 {
   max-width: 128px;
   aspect-ratio: 1320 / 2868;
   background: #101116 url("https://raw.githubusercontent.com/StefanR72/corekit-studio/7c509654dfdaa2404505adc5eb0a7cf94370b119/assets/flexrente-dashboard.png") top center / cover no-repeat;
-  border: 1px solid rgba(23, 32, 38, 0.18);
-  border-radius: 22px;
+  border: 1.5px solid #101116;
+  border-radius: 14px;
   box-shadow: 0 18px 42px rgba(23, 32, 38, 0.14);
 }
 
@@ -840,6 +840,7 @@ h3 {
   order: initial;
   z-index: auto;
   transform: none;
+  border-radius: 14px;
 }
 
 .app-showcase img:nth-child(2),
@@ -877,8 +878,7 @@ h3 {
   display: none;
 }
 
-/* FlexRente screenshots are raw iPhone captures; add only a clean, subtle device edge. */
-.app-showcase::after,
+/* FlexRente detail screenshots are raw iPhone captures; keep their device edge here only. */
 #flexrente .media-strip img {
   object-fit: cover;
   object-position: top center;
