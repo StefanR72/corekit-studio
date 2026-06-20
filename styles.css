@@ -809,11 +809,11 @@ h3 {
 /* App focus and screenshot normalization */
 .app-showcase {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: center;
   justify-items: center;
-  gap: clamp(10px, 1.6vw, 16px);
-  width: min(100%, 620px);
+  gap: clamp(8px, 1.3vw, 14px);
+  width: min(100%, 690px);
   min-height: 330px;
   margin-left: auto;
   padding: 12px;
@@ -824,7 +824,7 @@ h3 {
   content: "";
   display: block;
   width: 100%;
-  max-width: 150px;
+  max-width: 128px;
   aspect-ratio: 1320 / 2868;
   background: #101116 url("https://raw.githubusercontent.com/StefanR72/corekit-studio/7c509654dfdaa2404505adc5eb0a7cf94370b119/assets/flexrente-dashboard.png") top center / cover no-repeat;
   border: 1px solid rgba(23, 32, 38, 0.18);
@@ -835,7 +835,7 @@ h3 {
 .app-showcase .phone-shot,
 .app-showcase .primary-shot {
   width: 100%;
-  max-width: 150px;
+  max-width: 128px;
   flex: initial;
   order: initial;
   z-index: auto;
