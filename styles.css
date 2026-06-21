@@ -978,9 +978,21 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  .app-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 560px);
+    gap: 12px;
+  }
+
+  .app-showcase .phone-shot,
+  .app-showcase .primary-shot,
+  .app-showcase::after,
+  .app-showcase::before {
+    max-width: 150px;
+  }
+
   .app-showcase::before {
     width: 100%;
-    max-width: 150px;
   }
 
   .app-showcase::after {
