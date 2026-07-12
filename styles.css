@@ -1,16 +1,44 @@
 :root {
-  color-scheme: light;
-  --ink: #172026;
+  color-scheme: light dark;
+  --ink: #0c1114;
   --muted: #5c6870;
-  --line: #dbe2e6;
-  --paper: #f7f8f6;
+  --line: #e2e7ea;
+  --paper: #f5f5f7;
   --panel: #ffffff;
+  --card: #ffffff;
   --teal: #0f9f9a;
   --blue: #3368c9;
   --green: #438753;
   --accent: #f0b44c;
-  --focus: #0b6fdd;
+  --brand: #0071e3;
+  --focus: #0071e3;
+  --header-bg: rgba(245, 245, 247, 0.72);
+  --glass: rgba(255, 255, 255, 0.55);
+  --glass-strong: rgba(250, 250, 252, 0.9);
   --shadow: 0 20px 70px rgba(23, 32, 38, 0.13);
+  --shadow-card: 0 2px 4px rgba(12, 17, 20, 0.04), 0 14px 30px rgba(12, 17, 20, 0.07);
+  --radius: 18px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f5f5f7;
+    --muted: #9ea7ad;
+    --line: #2a2f34;
+    --paper: #000000;
+    --panel: #1c1c1e;
+    --card: #1c1c1e;
+    --teal: #40c8c0;
+    --blue: #6ea0e6;
+    --accent: #f0b44c;
+    --brand: #0a84ff;
+    --focus: #0a84ff;
+    --header-bg: rgba(0, 0, 0, 0.6);
+    --glass: rgba(40, 40, 43, 0.55);
+    --glass-strong: rgba(28, 28, 30, 0.92);
+    --shadow: 0 20px 70px rgba(0, 0, 0, 0.55);
+    --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.3), 0 16px 34px rgba(0, 0, 0, 0.45);
+  }
 }
 
 * {
@@ -25,10 +53,11 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -50,7 +79,7 @@ img {
   top: 12px;
   z-index: 100;
   padding: 10px 14px;
-  background: var(--ink);
+  background: var(--brand);
   color: #fff;
   border-radius: 8px;
   font-weight: 800;
@@ -70,11 +99,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 14px 24px;
   padding: 18px clamp(20px, 4vw, 56px);
-  background: rgba(247, 248, 246, 0.86);
-  border-bottom: 1px solid rgba(219, 226, 230, 0.78);
-  backdrop-filter: blur(18px);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--line);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
 }
 
 .brand {
@@ -118,8 +149,9 @@ img {
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: clamp(14px, 3vw, 34px);
+  gap: 6px clamp(14px, 3vw, 34px);
   color: var(--muted);
   font-size: 0.94rem;
   font-weight: 700;
@@ -129,6 +161,8 @@ img {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
+  white-space: nowrap;
+  overflow-wrap: normal;
   text-decoration: none;
 }
 
@@ -179,20 +213,20 @@ h1 {
   max-width: 650px;
   font-size: clamp(3rem, 6vw, 5.1rem);
   line-height: 0.98;
-  letter-spacing: 0;
+  letter-spacing: -0.03em;
 }
 
 h2 {
   margin: 8px 0 0;
   font-size: clamp(2rem, 4.4vw, 4rem);
   line-height: 1.02;
-  letter-spacing: 0;
+  letter-spacing: -0.025em;
 }
 
 h3 {
   margin: 6px 0 8px;
   font-size: 1.22rem;
-  letter-spacing: 0;
+  letter-spacing: -0.015em;
 }
 
 .lead {
@@ -214,21 +248,38 @@ h3 {
   align-items: center;
   justify-content: center;
   min-height: 46px;
-  padding: 11px 18px;
-  border-radius: 8px;
-  font-weight: 800;
+  padding: 12px 24px;
+  border-radius: 980px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
 }
 
 .button.primary {
-  background: var(--ink);
+  background: var(--brand);
   color: #fff;
+  box-shadow: 0 8px 22px rgba(0, 113, 227, 0.28);
+}
+
+.button.primary:hover {
+  box-shadow: 0 12px 28px rgba(0, 113, 227, 0.34);
 }
 
 .button.secondary {
-  background: #fff;
+  background: var(--glass);
   border: 1px solid var(--line);
   color: var(--ink);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .disabled-button {
@@ -413,10 +464,17 @@ h3 {
 
 .feature-grid article {
   min-height: 190px;
-  padding: 20px;
-  background: #fff;
+  padding: 24px;
+  background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-grid article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 6px rgba(12, 17, 20, 0.05), 0 22px 44px rgba(12, 17, 20, 0.1);
 }
 
 .feature-grid p {
@@ -428,10 +486,10 @@ h3 {
   margin: 22px 0 0;
   padding: 18px;
   color: var(--muted);
-  background: #fff;
+  background: var(--card);
   border: 1px solid var(--line);
   border-left: 4px solid var(--accent);
-  border-radius: 8px;
+  border-radius: var(--radius);
 }
 
 .app-grid {
@@ -445,10 +503,11 @@ h3 {
   grid-template-rows: auto 1fr auto;
   gap: 18px;
   min-height: 320px;
-  padding: 22px;
-  background: var(--panel);
+  padding: 24px;
+  background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
 }
 
 .app-card p {
@@ -492,14 +551,21 @@ h3 {
 .contact-list a {
   display: grid;
   gap: 4px;
-  padding: 18px;
-  background: #fff;
+  padding: 20px;
+  background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
   color: var(--ink);
   font-size: 1.02rem;
-  font-weight: 800;
+  font-weight: 700;
   text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-list a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 6px rgba(12, 17, 20, 0.05), 0 22px 44px rgba(12, 17, 20, 0.1);
 }
 
 .contact-list span {
@@ -517,10 +583,11 @@ h3 {
 }
 
 .legal-grid article {
-  padding: 20px;
-  background: #fff;
+  padding: 24px;
+  background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
 }
 
 .legal-grid h3 {
@@ -628,9 +695,10 @@ h3 {
 
 .legal-panel {
   padding: clamp(18px, 3vw, 26px);
-  background: #fff;
+  background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
 }
 
 .legal-panel h2 {
@@ -826,7 +894,7 @@ h3 {
   width: 100%;
   max-width: 128px;
   aspect-ratio: 1320 / 2868;
-  background: #101116 url("https://raw.githubusercontent.com/StefanR72/corekit-studio/7c509654dfdaa2404505adc5eb0a7cf94370b119/assets/flexrente-dashboard.png") top center / cover no-repeat;
+  background: #101116 url("assets/flexrente-dashboard.jpg") top center / cover no-repeat;
   border: 1.5px solid #101116;
   border-radius: 14px;
   box-shadow: 0 18px 42px rgba(23, 32, 38, 0.14);
@@ -960,7 +1028,7 @@ h3 {
   width: 100%;
   max-width: 118px;
   aspect-ratio: 1320 / 2868;
-  background: #101116 url("assets/liquidcinema-home.png") top center / cover no-repeat;
+  background: #101116 url("assets/liquidcinema-home.jpg") top center / cover no-repeat;
   border: 1.5px solid #101116;
   border-radius: 14px;
   box-shadow: 0 18px 42px rgba(23, 32, 38, 0.14);
@@ -998,4 +1066,221 @@ h3 {
   .app-showcase::after {
     order: 6;
   }
+}
+
+/* Dezenter 3D-Effekt mit Tiefe für App-Screenshots */
+.app-showcase {
+  perspective: 1800px;
+}
+
+.app-showcase .phone-shot,
+.app-showcase::before,
+.app-showcase::after {
+  transform: rotateY(-9deg) rotateX(3deg);
+  transform-origin: center;
+  box-shadow:
+    -12px 20px 34px rgba(23, 32, 38, 0.22),
+    -4px 8px 14px rgba(23, 32, 38, 0.14);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  will-change: transform;
+}
+
+.app-showcase .phone-shot:hover,
+.app-showcase:hover::before,
+.app-showcase:hover::after {
+  transform: rotateY(0deg) rotateX(0deg) translateY(-6px);
+  box-shadow:
+    -8px 26px 44px rgba(23, 32, 38, 0.26),
+    -2px 10px 18px rgba(23, 32, 38, 0.16);
+}
+
+/* Detail-Screenshots: aufrecht, aber mit Tiefe und leichtem Anheben */
+.product-layout .media-strip img {
+  box-shadow:
+    0 18px 34px rgba(23, 32, 38, 0.18),
+    0 6px 12px rgba(23, 32, 38, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.product-layout .media-strip img:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Auf schmalen Geräten keine statische Neigung (verhindert Abschneiden) */
+@media (max-width: 640px) {
+  .app-showcase .phone-shot,
+  .app-showcase::before,
+  .app-showcase::after {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-showcase .phone-shot,
+  .app-showcase::before,
+  .app-showcase::after,
+  .product-layout .media-strip img {
+    transform: none;
+  }
+}
+
+/* Sanfte Scroll-Einblendungen (Apple-like) */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.8s cubic-bezier(0.16, 0.84, 0.44, 1),
+      transform 0.8s cubic-bezier(0.16, 0.84, 0.44, 1);
+    transition-delay: var(--reveal-delay, 0s);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Safe-Area-Insets für randlose iPhones (Notch/Dynamic Island im Querformat) */
+@supports (padding: max(0px)) {
+  .site-header,
+  .hero,
+  .section,
+  .footer,
+  .legal-page {
+    padding-left: max(clamp(20px, 4vw, 56px), env(safe-area-inset-left));
+    padding-right: max(clamp(20px, 4vw, 56px), env(safe-area-inset-right));
+  }
+}
+
+/* ============================================================
+   Skalierbar: Apps-Menü + mitwachsende Hero-Reihe
+   (überschreibt die früheren, fest verdrahteten App-Showcase-Regeln)
+   ============================================================ */
+
+/* Apps-Aufklappmenü im Header */
+.nav-apps {
+  position: relative;
+}
+
+.nav-apps > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  list-style: none;
+  cursor: pointer;
+  white-space: nowrap;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.nav-apps > summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-apps > summary::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translate(-1px, -2px);
+  transition: transform 0.25s ease;
+}
+
+.nav-apps[open] > summary::after {
+  transform: rotate(-135deg) translate(-1px, -1px);
+}
+
+.nav-apps > summary:hover,
+.nav-apps[open] > summary {
+  color: var(--ink);
+}
+
+.nav-apps > summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.nav-apps-menu {
+  display: grid;
+}
+
+.nav-apps-menu a {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.nav-apps-menu a:hover {
+  color: var(--ink);
+}
+
+@media (min-width: 641px) {
+  .nav-apps-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    gap: 2px;
+    min-width: 210px;
+    padding: 8px;
+    background: var(--glass-strong);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    z-index: 30;
+  }
+
+  .nav-apps-menu a {
+    min-height: 40px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+
+  .nav-apps-menu a:hover {
+    background: rgba(120, 120, 128, 0.16);
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-apps {
+    width: 100%;
+  }
+
+  .nav-apps-menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px 20px;
+    padding: 4px 0 2px 2px;
+  }
+}
+
+/* Mitwachsende Hero-Screenshot-Reihe: eine neue App = ein Bild mehr */
+.app-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.3vw, 15px);
+  width: min(100%, 900px);
+  min-height: 0;
+  margin-left: auto;
+  padding: 14px 6px;
+}
+
+.app-showcase::before,
+.app-showcase::after {
+  content: none !important;
+  display: none !important;
+}
+
+.app-showcase .phone-shot {
+  width: clamp(86px, 11vw, 110px);
+  max-width: 110px;
+  flex: 0 0 auto;
+  aspect-ratio: 1320 / 2868;
+  border-radius: 16px;
 }

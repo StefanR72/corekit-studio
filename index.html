@@ -2,10 +2,11 @@
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description" content="CoreKit Studio entwickelt moderne iOS Apps und Apple Apps: CorSync für Blutdruck und Gesundheit, PureTank für intelligentes Tanken, Korb als smarte Einkaufsliste, FlexRente für Altersteilzeit, KlarWetter für klare Wetterinformationen und LiquidCinema für Film- und Serieninformationen.">
     <meta name="robots" content="index,follow,max-image-preview:large">
-    <meta name="theme-color" content="#f7f8f6">
+    <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <meta name="apple-mobile-web-app-title" content="CoreKit Studio">
     <link rel="canonical" href="https://corekit-studio.de/">
     <link rel="icon" type="image/svg+xml" href="assets/corekit-logo.svg">
@@ -71,7 +72,7 @@
             "operatingSystem": "iOS, watchOS",
             "description": "CorSync ist eine datenschutzorientierte Blutdruck App für Gesundheitsmanagement, Apple Health Integration, Medikamentenerinnerungen und moderne Auswertungen.",
             "downloadUrl": "https://apps.apple.com/de/app/corsync/id6761901970",
-            "image": "https://corekit-studio.de/assets/corsync-dashboard.png",
+            "image": "https://corekit-studio.de/assets/corsync-dashboard.jpg",
             "publisher": { "@id": "https://corekit-studio.de/#organization" }
           },
           {
@@ -83,7 +84,7 @@
             "operatingSystem": "iOS",
             "description": "PureTank ist eine Tankbuch App mit Live-Spritpreisen, Flottenkarten, Statistiken und Kostenkontrolle für Apple Plattformen.",
             "downloadUrl": "https://apps.apple.com/de/app/puretank/id6770213105",
-            "image": "https://corekit-studio.de/assets/puretank-dashboard.png",
+            "image": "https://corekit-studio.de/assets/puretank-dashboard.jpg",
             "publisher": { "@id": "https://corekit-studio.de/#organization" }
           },
           {
@@ -95,7 +96,7 @@
             "operatingSystem": "iOS, iPadOS, watchOS",
             "description": "Korb ist eine moderne Einkaufslisten App mit Familienfreigabe, iCloud Synchronisation, Apple Watch Unterstützung und einfacher Bedienung.",
             "downloadUrl": "https://apps.apple.com/de/app/korb-einkaufsliste/id6764864409",
-            "image": "https://corekit-studio.de/assets/korb-dashboard.png",
+            "image": "https://corekit-studio.de/assets/korb-dashboard.jpg",
             "publisher": { "@id": "https://corekit-studio.de/#organization" }
           },
           {
@@ -106,7 +107,7 @@
             "operatingSystem": "iOS",
             "description": "FlexRente ist eine Orientierungshilfe fuer Arbeitnehmerinnen und Arbeitnehmer in Deutschland, um Altersteilzeit, Netto-Betraege, Rentenabschlaege und Szenarien verstaendlich einzuschaetzen.",
             "downloadUrl": "https://apps.apple.com/de/app/flexrente/id6781324924",
-            "image": "https://raw.githubusercontent.com/StefanR72/corekit-studio/7c509654dfdaa2404505adc5eb0a7cf94370b119/assets/flexrente-dashboard.png",
+            "image": "https://corekit-studio.de/assets/flexrente-dashboard.jpg",
             "publisher": { "@id": "https://corekit-studio.de/#organization" }
           },
           {
@@ -117,7 +118,7 @@
             "operatingSystem": "iOS, iPadOS, watchOS",
             "description": "KlarWetter ist eine moderne Wetter App fuer iPhone, iPad und Apple Watch mit aktuellem Wetter, 7-Tage-Ausblick, stuendlichem Verlauf, Wetterwarnungen, UV-Index, Pollen, Wind und Regenrisiko.",
             "downloadUrl": "https://apps.apple.com/de/app/klarwetter/id6780468474",
-            "image": "https://corekit-studio.de/assets/klarwetter-dashboard.png",
+            "image": "https://corekit-studio.de/assets/klarwetter-dashboard.jpg",
             "publisher": { "@id": "https://corekit-studio.de/#organization" }
           },
           {
@@ -127,7 +128,7 @@
             "applicationCategory": "EntertainmentApplication",
             "operatingSystem": "iOS",
             "description": "LiquidCinema ist eine unabhaengige Informations- und Organisations-App fuer Filme und Serien mit Metadaten, Trailern, Bewertungen, Verfuegbarkeitshinweisen, Watchlist und NFO-Metadaten. Die App stellt keine Streams oder Downloads bereit.",
-            "image": "https://corekit-studio.de/assets/liquidcinema-home.png",
+            "image": "https://corekit-studio.de/assets/liquidcinema-home.jpg",
             "publisher": { "@id": "https://corekit-studio.de/#organization" }
           }
         ]
@@ -141,15 +142,19 @@
         <span>CoreKit Studio</span>
       </a>
       <nav class="nav" aria-label="Hauptnavigation">
-        <a href="#corsync">CorSync</a>
-        <a href="#puretank">PureTank</a>
-        <a href="#korb">Korb</a>
-        <a href="#flexrente">FlexRente</a>
-        <a href="#klarwetter">KlarWetter</a>
-        <a href="#liquidcinema">LiquidCinema</a>
+        <details class="nav-apps">
+          <summary>Apps</summary>
+          <div class="nav-apps-menu">
+            <a href="#corsync">CorSync</a>
+            <a href="#puretank">PureTank</a>
+            <a href="#korb">Korb</a>
+            <a href="#flexrente">FlexRente</a>
+            <a href="#klarwetter">KlarWetter</a>
+            <a href="#liquidcinema">LiquidCinema</a>
+          </div>
+        </details>
         <a href="#funktionen">Funktionen</a>
         <a href="#kontakt">Kontakt</a>
-        <a href="#rechtliches">Rechtliches</a>
       </nav>
     </header>
 
@@ -167,12 +172,15 @@
             <a class="button secondary" href="mailto:support@corekit-studio.de">Kontakt aufnehmen</a>
           </div>
         </div>
-        <div class="hero-visual app-showcase" aria-label="CoreKit Studio App-Vorschau auf iPhone">
-          <img class="phone-shot primary-shot" src="assets/corsync-dashboard.png" alt="CorSync Dashboard mit Blutdruckwerten und Medikamentenerinnerung">
-          <img class="phone-shot secondary-shot" src="assets/puretank-dashboard.png" alt="PureTank Dashboard mit Live-Spritpreisen">
-          <img class="phone-shot secondary-shot" src="assets/korb-dashboard.png" alt="Korb Dashboard mit Einkaufsliste">
-          <img class="phone-shot secondary-shot" src="assets/klarwetter-dashboard.png" alt="KlarWetter Dashboard mit aktuellem Wetter und Warnhinweisen">
+        <div class="hero-visual app-showcase" aria-label="CoreKit Studio Apps auf dem iPhone">
+          <img class="phone-shot" src="assets/corsync-dashboard.jpg" alt="CorSync Dashboard mit Blutdruckwerten und Medikamentenerinnerung">
+          <img class="phone-shot" src="assets/puretank-dashboard.jpg" alt="PureTank Dashboard mit Live-Spritpreisen">
+          <img class="phone-shot" src="assets/korb-dashboard.jpg" alt="Korb Dashboard mit Einkaufsliste">
+          <img class="phone-shot" src="assets/klarwetter-dashboard.jpg" alt="KlarWetter Dashboard mit aktuellem Wetter und Warnhinweisen">
+          <img class="phone-shot" src="assets/flexrente-dashboard.jpg" alt="FlexRente Übersicht mit Netto-Vergleich der Lebensphasen">
+          <img class="phone-shot" src="assets/liquidcinema-home.jpg" alt="LiquidCinema Startseite mit aktuellen Kinostarts">
         </div>
+        <!-- Neue App? Einfach ein weiteres <img class="phone-shot"> hier ergänzen. -->
       </section>
 
       <section class="section intro" aria-label="Profil">
@@ -214,9 +222,9 @@
             </ul>
           </div>
           <div class="media-strip" aria-label="CorSync Screenshots">
-            <img src="assets/corsync-onboarding.png" alt="CorSync Willkommensbildschirm">
-            <img src="assets/corsync-dashboard.png" alt="CorSync Dashboard">
-            <img src="assets/corsync-export.png" alt="CorSync Export und Sicherheit">
+            <img loading="lazy" decoding="async" src="assets/corsync-onboarding.jpg" alt="CorSync Willkommensbildschirm">
+            <img loading="lazy" decoding="async" src="assets/corsync-dashboard.jpg" alt="CorSync Dashboard">
+            <img loading="lazy" decoding="async" src="assets/corsync-export.jpg" alt="CorSync Export und Sicherheit">
           </div>
         </div>
       </section>
@@ -247,10 +255,10 @@
             </ul>
           </div>
           <div class="media-strip four-up" aria-label="PureTank Screenshots">
-            <img src="assets/puretank-dashboard.png" alt="PureTank Dashboard mit Live-Spritpreisen">
-            <img src="assets/puretank-map.png" alt="PureTank Karte und Tankradar">
-            <img src="assets/puretank-wallet.png" alt="PureTank Flottenkarten Wallet">
-            <img src="assets/puretank-station.png" alt="PureTank Stationsdetails und Tankkosten">
+            <img loading="lazy" decoding="async" src="assets/puretank-dashboard.jpg" alt="PureTank Dashboard mit Live-Spritpreisen">
+            <img loading="lazy" decoding="async" src="assets/puretank-map.jpg" alt="PureTank Karte und Tankradar">
+            <img loading="lazy" decoding="async" src="assets/puretank-wallet.jpg" alt="PureTank Flottenkarten Wallet">
+            <img loading="lazy" decoding="async" src="assets/puretank-station.jpg" alt="PureTank Stationsdetails und Tankkosten">
           </div>
         </div>
       </section>
@@ -280,10 +288,10 @@
             </ul>
           </div>
           <div class="media-strip four-up mixed-device" aria-label="Korb Screenshots">
-            <img src="assets/korb-dashboard.png" alt="Korb Einkaufsliste auf dem iPhone">
-            <img src="assets/korb-shared-list.png" alt="Korb geteilte Einkaufsliste mit Live-Synchronisation">
-            <img src="assets/korb-bundles.png" alt="Korb Bundles und Favoriten">
-            <img class="watch-media" src="assets/korb-watch.png" alt="Korb auf der Apple Watch">
+            <img loading="lazy" decoding="async" src="assets/korb-dashboard.jpg" alt="Korb Einkaufsliste auf dem iPhone">
+            <img loading="lazy" decoding="async" src="assets/korb-shared-list.jpg" alt="Korb geteilte Einkaufsliste mit Live-Synchronisation">
+            <img loading="lazy" decoding="async" src="assets/korb-bundles.jpg" alt="Korb Bundles und Favoriten">
+            <img class="watch-media" src="assets/korb-watch.jpg" alt="Korb auf der Apple Watch">
           </div>
         </div>
       </section>
@@ -314,9 +322,9 @@
             </ul>
           </div>
           <div class="media-strip" aria-label="FlexRente Screenshots">
-            <img src="https://raw.githubusercontent.com/StefanR72/corekit-studio/7c509654dfdaa2404505adc5eb0a7cf94370b119/assets/flexrente-dashboard.png" alt="FlexRente Übersicht mit Netto-Vergleich der Lebensphasen">
-            <img src="assets/flexrente-szenario.png?v=20260619-5" alt="FlexRente Szenario-Eingabe für Altersteilzeit und persönliche Annahmen">
-            <img src="assets/flexrente-auswertung.png?v=20260619-5" alt="FlexRente Auswertung mit Brutto- und Nettoverlauf">
+            <img loading="lazy" decoding="async" src="assets/flexrente-dashboard.jpg" alt="FlexRente Übersicht mit Netto-Vergleich der Lebensphasen">
+            <img loading="lazy" decoding="async" src="assets/flexrente-szenario.jpg?v=20260619-5" alt="FlexRente Szenario-Eingabe für Altersteilzeit und persönliche Annahmen">
+            <img loading="lazy" decoding="async" src="assets/flexrente-auswertung.jpg?v=20260619-5" alt="FlexRente Auswertung mit Brutto- und Nettoverlauf">
           </div>
         </div>
       </section>
@@ -347,9 +355,9 @@
             </ul>
           </div>
           <div class="media-strip" aria-label="KlarWetter Screenshots">
-            <img src="assets/klarwetter-dashboard.png" alt="KlarWetter Dashboard mit aktuellem Wetter">
-            <img src="assets/klarwetter-forecast.png" alt="KlarWetter Vorhersage mit 7-Tage-Ausblick und stündlichem Verlauf">
-            <img src="assets/klarwetter-settings.png" alt="KlarWetter Einstellungen mit Datenquellen, Auswertung und App-Icon-Auswahl">
+            <img loading="lazy" decoding="async" src="assets/klarwetter-dashboard.jpg" alt="KlarWetter Dashboard mit aktuellem Wetter">
+            <img loading="lazy" decoding="async" src="assets/klarwetter-forecast.jpg" alt="KlarWetter Vorhersage mit 7-Tage-Ausblick und stündlichem Verlauf">
+            <img loading="lazy" decoding="async" src="assets/klarwetter-settings.jpg" alt="KlarWetter Einstellungen mit Datenquellen, Auswertung und App-Icon-Auswahl">
           </div>
         </div>
       </section>
@@ -379,9 +387,9 @@
             </ul>
           </div>
           <div class="media-strip" aria-label="LiquidCinema Screenshots">
-            <img src="assets/liquidcinema-home.png" alt="LiquidCinema Startseite mit aktuellen Kinostarts">
-            <img src="assets/liquidcinema-detail.png" alt="LiquidCinema Detailseite mit Bewertungen und NFO-Metadaten">
-            <img src="assets/liquidcinema-rechtliches.png" alt="LiquidCinema Info- und Rechtliches-Seite">
+            <img loading="lazy" decoding="async" src="assets/liquidcinema-home.jpg" alt="LiquidCinema Startseite mit aktuellen Kinostarts">
+            <img loading="lazy" decoding="async" src="assets/liquidcinema-detail.jpg" alt="LiquidCinema Detailseite mit Bewertungen und NFO-Metadaten">
+            <img loading="lazy" decoding="async" src="assets/liquidcinema-rechtliches.jpg" alt="LiquidCinema Info- und Rechtliches-Seite">
           </div>
         </div>
       </section>
@@ -488,85 +496,135 @@
       <section class="section contact-section" id="kontakt" aria-labelledby="contact-title">
         <div>
           <p class="section-kicker">Kontakt</p>
-          <h2 id="contact-title">Support und Datenschutz</h2>
+          <h2 id="contact-title">Fragen oder Feedback?</h2>
           <p>
-            Für Support, Datenschutzanfragen und App-Store-Kommunikation nutzt CoreKit Studio getrennte
-            geschäftliche Kontaktwege.
+            Schreib uns einfach – wir helfen bei Fragen zu unseren Apps, zum Datenschutz
+            und zu allem rund um CoreKit Studio.
           </p>
         </div>
-        <div class="contact-list" aria-label="Kontaktadressen">
+        <div class="contact-list" aria-label="Kontakt und weiterführende Seiten">
           <a href="mailto:support@corekit-studio.de">
             <span>Support</span>
             support@corekit-studio.de
           </a>
-          <a href="mailto:privacy@corekit-studio.de">
+          <a href="support.html">
+            <span>Hilfe &amp; Support</span>
+            Support-Seite öffnen
+          </a>
+          <a href="datenschutz.html">
             <span>Datenschutz</span>
-            privacy@corekit-studio.de
+            Datenschutz je App
           </a>
-          <a href="mailto:legal@corekit-studio.de">
-            <span>Rechtliches</span>
-            legal@corekit-studio.de
-          </a>
-        </div>
-      </section>
-
-      <section class="section legal" id="rechtliches" aria-labelledby="legal-title">
-        <div>
-          <p class="section-kicker">Rechtliches</p>
-          <h2 id="legal-title">Impressum & Datenschutz</h2>
-        </div>
-        <div class="legal-grid">
-          <article>
-            <h3>Impressum</h3>
-            <p>Angaben zum Anbieter, Kontaktwege und Verantwortlichkeit für diese Website.</p>
-            <a class="text-link" href="impressum.html">Impressum öffnen</a>
-          </article>
-          <article>
-            <h3>Datenschutz</h3>
-            <p>Allgemeine Datenschutzhinweise zur Website sowie eigene Datenschutzseiten für CorSync, PureTank, Korb, FlexRente, KlarWetter und LiquidCinema.</p>
-            <a class="text-link" href="datenschutz.html">Datenschutz öffnen</a>
-          </article>
-          <article>
-            <h3>CorSync</h3>
-            <p>App-spezifische Hinweise zu Gesundheitsdaten, Apple Health, Bluetooth, Watch und Exporten.</p>
-            <a class="text-link" href="datenschutz/corsync.html">CorSync Datenschutz</a>
-          </article>
-          <article>
-            <h3>PureTank</h3>
-            <p>App-spezifische Hinweise zu Standort, Tankerkoenig, Apple Maps, Preisalarmen und lokalen Einstellungen.</p>
-            <a class="text-link" href="datenschutz/puretank.html">PureTank Datenschutz</a>
-          </article>
-          <article>
-            <h3>Korb</h3>
-            <p>App-spezifische Hinweise zu iCloud/CloudKit, geteilten Listen, Watch-Diktat und Standorterinnerungen.</p>
-            <a class="text-link" href="datenschutz/korb.html">Korb Datenschutz</a>
-          </article>
-          <article>
-            <h3>FlexRente</h3>
-            <p>App-spezifische Hinweise zu Szenarien, Berechnungsannahmen, gespeicherten Eingaben und Beratungsausschluss.</p>
-            <a class="text-link" href="datenschutz/flexrente.html">FlexRente Datenschutz</a>
-          </article>
-          <article>
-            <h3>KlarWetter</h3>
-            <p>App-spezifische Hinweise zu Standort, Wetterdaten, Warnquellen, Widgets und Benachrichtigungen.</p>
-            <a class="text-link" href="datenschutz/klarwetter.html">KlarWetter Datenschutz</a>
-          </article>
-          <article>
-            <h3>LiquidCinema</h3>
-            <p>App-spezifische Hinweise zu Metadaten, Trailern, Bewertungen, Watchlists, Verfügbarkeitshinweisen und NFO-Metadaten.</p>
-            <a class="text-link" href="datenschutz/liquidcinema.html">LiquidCinema Datenschutz</a>
-          </article>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <span>© <span id="year">2026</span> CoreKit Studio</span>
-      <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+      <span><a href="support.html">Support</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
     </footer>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Apps-Aufklappmenü: schließt bei Klick auf Link, Klick außerhalb und Escape
+      (function () {
+        var details = document.querySelector(".nav-apps");
+        if (!details) return;
+        details.querySelectorAll(".nav-apps-menu a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            details.removeAttribute("open");
+          });
+        });
+        document.addEventListener("click", function (e) {
+          if (details.open && !details.contains(e.target)) {
+            details.removeAttribute("open");
+          }
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && details.open) {
+            details.removeAttribute("open");
+            var s = details.querySelector("summary");
+            if (s) s.focus();
+          }
+        });
+      })();
+
+      // Sanfte Scroll-Einblendungen (respektiert "Bewegung reduzieren")
+      (function () {
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduce || !("IntersectionObserver" in window)) return;
+
+        var selectors = [
+          ".hero-copy",
+          ".app-showcase",
+          ".intro > div",
+          ".intro > p",
+          ".section-heading",
+          ".product-copy",
+          ".product-layout .media-strip",
+          ".feature-grid article",
+          ".app-card",
+          ".medical-note",
+          ".contact-section > div",
+          ".contact-list a",
+          ".legal > div",
+          ".legal-grid article"
+        ];
+        var items = document.querySelectorAll(selectors.join(","));
+
+        items.forEach(function (el) {
+          el.classList.add("reveal");
+        });
+
+        // Gestaffelte Verzögerung für Elemente in derselben Gruppe
+        function stagger(parentSelector, childSelector) {
+          document.querySelectorAll(parentSelector).forEach(function (parent) {
+            var kids = parent.querySelectorAll(childSelector);
+            kids.forEach(function (kid, i) {
+              kid.style.setProperty("--reveal-delay", (i % 6) * 0.08 + "s");
+            });
+          });
+        }
+        stagger(".feature-grid", "article");
+        stagger(".app-grid", ".app-card");
+        stagger(".contact-list", "a");
+        stagger(".legal-grid", "article");
+        stagger(".product-layout .media-strip", "img");
+
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { rootMargin: "0px 0px -6% 0px", threshold: 0.01 }
+        );
+
+        items.forEach(function (el) {
+          io.observe(el);
+        });
+
+        // Sicherheitsnetz: alles im (oder oberhalb des) Sichtbereichs sofort zeigen,
+        // damit beim Laden/Sprung zu Ankern nie Inhalte unsichtbar hängen bleiben.
+        function revealInView() {
+          items.forEach(function (el) {
+            if (el.classList.contains("is-visible")) return;
+            var r = el.getBoundingClientRect();
+            if (r.top < window.innerHeight * 0.95) {
+              el.classList.add("is-visible");
+              io.unobserve(el);
+            }
+          });
+        }
+        window.addEventListener("load", revealInView);
+        window.addEventListener("hashchange", function () {
+          setTimeout(revealInView, 60);
+        });
+      })();
     </script>
   </body>
 </html>
