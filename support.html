@@ -54,24 +54,32 @@
           }
         ]
       }
+
     </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
-    <header class="site-header">
-      <a class="brand" href="index.html#top" aria-label="CoreKit Studio Startseite">
-        <span class="brand-mark" aria-hidden="true">CK</span>
+        <header class="site-header">
+      <a class="brand" href="index.html#top" aria-label="Startseite">
+        <img class="brand-logo" src="assets/corekit-logo.svg" alt="" width="34" height="34" aria-hidden="true">
         <span>CoreKit Studio</span>
       </a>
       <nav class="nav" aria-label="Hauptnavigation">
-        <a href="index.html#corsync">CorSync</a>
-        <a href="index.html#puretank">PureTank</a>
-        <a href="index.html#korb">Korb</a>
-        <a href="index.html#flexrente">FlexRente</a>
-        <a href="index.html#klarwetter">KlarWetter</a>
-        <a href="index.html#liquidcinema">LiquidCinema</a>
-        <a href="datenschutz.html">Datenschutz</a>
-        <a href="impressum.html">Impressum</a>
+        <details class="nav-apps">
+          <summary>Apps</summary>
+          <div class="nav-apps-menu">
+            <a href="index.html#corsync">CorSync</a>
+            <a href="index.html#puretank">PureTank</a>
+            <a href="index.html#korb">Korb</a>
+            <a href="index.html#flexrente">FlexRente</a>
+            <a href="index.html#klarwetter">KlarWetter</a>
+            <a href="index.html#liquidcinema">LiquidCinema</a>
+            <a href="index.html#igelbert">Igelbert</a>
+          </div>
+        </details>
+        <a href="index.html#funktionen">Funktionen</a>
+        <a href="index.html#kontakt">Kontakt</a>
+        <a href="support.html">Support</a>
       </nav>
     </header>
 
@@ -136,6 +144,17 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+      // Apps-Aufklappmenü: schließt bei Klick außerhalb und Escape
+      (function () {
+        var d = document.querySelector(".nav-apps");
+        if (!d) return;
+        document.addEventListener("click", function (e) {
+          if (d.open && !d.contains(e.target)) d.removeAttribute("open");
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && d.open) d.removeAttribute("open");
+        });
+      })();
     </script>
   </body>
 </html>
