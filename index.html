@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="CoreKit Studio entwickelt moderne iOS Apps und Apple Apps: CorSync für Blutdruck und Gesundheit, PureTank für intelligentes Tanken, Korb als smarte Einkaufsliste, FlexRente für Altersteilzeit, KlarWetter für klare Wetterinformationen und LiquidCinema für Film- und Serieninformationen.">
+    <meta name="description" content="CoreKit Studio entwickelt moderne iOS Apps und Apple Apps: CorSync für Blutdruck und Gesundheit, PureTank für intelligentes Tanken, Korb als smarte Einkaufsliste, FlexRente für Altersteilzeit, KlarWetter für klare Wetterinformationen, LiquidCinema für Film- und Serieninformationen und das Match-3-Spiel Igelberts Garten.">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="CoreKit Studio">
     <meta property="og:url" content="https://corekit-studio.de/">
     <meta property="og:title" content="CoreKit Studio | Moderne Apple Apps">
-    <meta property="og:description" content="CorSync, PureTank, Korb, FlexRente, KlarWetter und LiquidCinema: fokussierte Apps für Gesundheit, Mobilität, Einkauf, finanzielle Orientierung, Wetter und Film-/Serieninfos auf Apple Plattformen.">
+    <meta property="og:description" content="CorSync, PureTank, Korb, FlexRente, KlarWetter, LiquidCinema und das Match-3-Spiel Igelberts Garten: fokussierte Apps für Gesundheit, Mobilität, Einkauf, finanzielle Orientierung, Wetter, Film-/Serieninfos und Spielspaß auf Apple Plattformen.">
     <meta property="og:image" content="https://corekit-studio.de/assets/corekit-logo.svg">
     <meta property="og:image:alt" content="CoreKit Studio Logo">
     <meta name="twitter:card" content="summary_large_image">
@@ -130,6 +130,18 @@
             "description": "LiquidCinema ist eine unabhaengige Informations- und Organisations-App fuer Filme und Serien mit Metadaten, Trailern, Bewertungen, Verfuegbarkeitshinweisen, Watchlist und NFO-Metadaten. Die App stellt keine Streams oder Downloads bereit.",
             "image": "https://corekit-studio.de/assets/liquidcinema-home.jpg",
             "publisher": { "@id": "https://corekit-studio.de/#organization" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://corekit-studio.de/#igelbert-app",
+            "name": "Igelberts Garten",
+            "alternateName": "Igelbert",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "iOS",
+            "description": "Igelberts Garten ist ein kostenloses Match-3-Spiel mit besonderer Reife-Mechanik: Früchte tauschen, Dreierketten bilden, im richtigen Moment ernten und den Obstgarten vor dem Schimmel-König retten. 150 handgemachte Level, Helferfiguren und eine liebevoll erzählte Geschichte.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+            "image": "https://corekit-studio.de/assets/igelbert-garten.jpg",
+            "publisher": { "@id": "https://corekit-studio.de/#organization" }
           }
         ]
       }
@@ -151,6 +163,7 @@
             <a href="#flexrente">FlexRente</a>
             <a href="#klarwetter">KlarWetter</a>
             <a href="#liquidcinema">LiquidCinema</a>
+            <a href="#igelbert">Igelbert</a>
           </div>
         </details>
         <a href="#funktionen">Funktionen</a>
@@ -166,6 +179,7 @@
           <p class="lead">
             CorSync, PureTank, Korb, FlexRente, KlarWetter und LiquidCinema verbinden moderne Apple-Plattformen mit klaren Alltagsaufgaben:
             Gesundheitsdaten dokumentieren, intelligenter tanken, Einkäufe synchron planen, Altersteilzeit besser einschätzen, Wetterlagen verstehen und Film-/Serieninfos organisieren.
+            Neu: <strong>Igelberts Garten</strong> – ein Match-3-Spiel für entspannten Rätselspaß.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#corsync">Apps ansehen</a>
@@ -179,6 +193,7 @@
           <img class="phone-shot" src="assets/klarwetter-dashboard.jpg" alt="KlarWetter Dashboard mit aktuellem Wetter und Warnhinweisen">
           <img class="phone-shot" src="assets/flexrente-dashboard.jpg" alt="FlexRente Übersicht mit Netto-Vergleich der Lebensphasen">
           <img class="phone-shot" src="assets/liquidcinema-home.jpg" alt="LiquidCinema Startseite mit aktuellen Kinostarts">
+          <img class="phone-shot" src="assets/igelbert-garten.jpg" alt="Igelberts Garten Spielfeld mit Früchten zum Kombinieren">
         </div>
         <!-- Neue App? Einfach ein weiteres <img class="phone-shot"> hier ergänzen. -->
       </section>
@@ -390,6 +405,39 @@
             <img loading="lazy" decoding="async" src="assets/liquidcinema-home.jpg" alt="LiquidCinema Startseite mit aktuellen Kinostarts">
             <img loading="lazy" decoding="async" src="assets/liquidcinema-detail.jpg" alt="LiquidCinema Detailseite mit Bewertungen und NFO-Metadaten">
             <img loading="lazy" decoding="async" src="assets/liquidcinema-rechtliches.jpg" alt="LiquidCinema Info- und Rechtliches-Seite">
+          </div>
+        </div>
+      </section>
+
+      <section class="section app-detail" id="igelbert" aria-labelledby="igelbert-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Spiel</p>
+            <h2 id="igelbert-title">Igelberts Garten</h2>
+          </div>
+          <span class="button secondary compact disabled-button">Bald im App Store</span>
+        </div>
+
+        <div class="product-layout">
+          <div class="product-copy">
+            <p class="app-platform">iPhone · Match-3</p>
+            <h3>Match-3 mit Herz: Rette den Obstgarten vor dem Schimmel-König</h3>
+            <p>
+              Der fiese Schimmel-König will den schönsten Obstgarten verfaulen lassen – nur du kannst ihn aufhalten.
+              Tausche saftige Früchte, bilde Dreierketten und rette Apfel, Orange und Traube, bevor der Schimmel sie sich holt.
+            </p>
+            <ul class="quick-list" aria-label="Igelberts Garten Kurzfunktionen">
+              <li>150 handgemachte Level – von entspannt bis knifflig</li>
+              <li>Besondere Reife-Mechanik: Früchte reifen von grün über reif bis faul</li>
+              <li>Helfer wie Biene Berta, Nussi das Eichhörnchen und der Falter</li>
+              <li>Eine echte Geschichte mit liebevollen Zwischenszenen</li>
+              <li>Komplett kostenlos – kein Konto, keine versteckten Kosten</li>
+            </ul>
+          </div>
+          <div class="media-strip" aria-label="Igelberts Garten Screenshots">
+            <img loading="lazy" decoding="async" src="assets/igelbert-garten.jpg" alt="Igelberts Garten Spielfeld mit Früchten zum Kombinieren">
+            <img loading="lazy" decoding="async" src="assets/igelbert-level.jpg" alt="Igelberts Garten Startbildschirm mit Levelauswahl und Schwierigkeitsgraden">
+            <img loading="lazy" decoding="async" src="assets/igelbert-reife.jpg" alt="Igelberts Garten Shop mit Power-ups wie Mischen, Extra-Zügen und Hammer">
           </div>
         </div>
       </section>
