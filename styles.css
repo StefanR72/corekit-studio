@@ -888,18 +888,6 @@ h3 {
   overflow: visible;
 }
 
-.app-showcase::after {
-  content: "";
-  display: block;
-  width: 100%;
-  max-width: 128px;
-  aspect-ratio: 1320 / 2868;
-  background: #101116 url("assets/flexrente-dashboard.jpg") top center / cover no-repeat;
-  border: 1.5px solid #101116;
-  border-radius: 14px;
-  box-shadow: 0 18px 42px rgba(23, 32, 38, 0.14);
-}
-
 .app-showcase .phone-shot,
 .app-showcase .primary-shot {
   width: 100%;
@@ -1015,24 +1003,11 @@ h3 {
   }
 }
 
-/* LiquidCinema hero focus image */
+/* Hero-Reihe: Feinabstimmung */
 .app-showcase {
   grid-template-columns: repeat(6, minmax(0, 1fr));
   width: min(100%, 820px);
   gap: clamp(7px, 1.1vw, 12px);
-}
-
-.app-showcase::before {
-  content: "";
-  display: block;
-  width: 100%;
-  max-width: 118px;
-  aspect-ratio: 1320 / 2868;
-  background: #101116 url("assets/liquidcinema-home.jpg") top center / cover no-repeat;
-  border: 1.5px solid #101116;
-  border-radius: 14px;
-  box-shadow: 0 18px 42px rgba(23, 32, 38, 0.14);
-  order: 6;
 }
 
 .app-showcase::after {
